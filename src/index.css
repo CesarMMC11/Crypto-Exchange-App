@@ -842,3 +842,31 @@ h2 {
   margin-top: 6rem;
 }
 
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive: móviles */
+@media (max-width: 600px) {
+  .modal-1 {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 90vh;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 0;
+  }
+}
+
+
