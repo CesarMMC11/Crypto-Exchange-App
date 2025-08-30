@@ -15,7 +15,7 @@
     const CryptoHoldingsTable = () => {
     return (
         <div className="holdings-container">
-        <h2>Tu Saldo Actual de Criptomonedas</h2>
+        <h2>Tu Saldo Actual</h2>
         <table className="holdings-table">
             <thead>
             <tr>

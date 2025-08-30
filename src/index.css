@@ -324,6 +324,12 @@ h2 {
   margin: 1rem 2rem;
 }
 
+@media (max-width: 680px) {
+  .home-container {
+    margin: 0;
+  }
+}
+
 
 .form-container {
   display: flex;
