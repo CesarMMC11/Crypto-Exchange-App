@@ -720,43 +720,102 @@ h2 {
   }
 }
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   .modal {
     top: 45%;
     transform: translate(-50%, -45%);
     padding: 1rem;
     border-radius: 12px;
   }
-} */
+}
 
 
 /*swapModal*/
 
 .swap-row {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   align-items: end;
   margin: 1rem 0;
 }
-.swap-col label { display:block; margin-bottom: .25rem; color:#2c5364; }
-.swap-col select, .swap-col input {
-  width: 100%; padding: .6rem .8rem; border-radius: 10px; border: 1px solid #e0e0e0;
+
+.swap-col {
+  display: flex;
+  flex-direction: column;
 }
+
+.swap-col label {
+  margin-bottom: 0.25rem;
+  color: #2c5364;
+}
+
+.swap-col select,
+.swap-col input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
 .swap-switch {
-  align-self: center; padding: .5rem .75rem; border-radius: 10px; border: 1px solid #e0e0e0; background:#fff; cursor:pointer;
+  justify-self: center;
+  align-self: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  cursor: pointer;
+  width: 5rem;
 }
-.swap-meta { display:grid; gap:.25rem; font-size:.9rem; color:#333; }
-.swap-warning { color:#c77d00; }
-.swap-error { color:#c0392b; }
+
+.swap-meta {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.swap-warning {
+  color: #c77d00;
+}
+
+.swap-error {
+  color: #c0392b;
+}
+
 .swap-cta {
-  width: 100%; padding: .8rem 1rem; border:none; border-radius:12px; background:#2c5364; color:#fff; cursor:pointer;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: #2c5364;
+  color: #fff;
+  cursor: pointer;
 }
-.swap-cta:disabled { opacity:.5; cursor:not-allowed; }
-@media (max-width: 480px){
-  .swap-row { grid-template-columns: 1fr; }
-  .swap-switch { transform: rotate(90deg); }
+
+.swap-cta:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
+
+/* ✅ Responsive fix */
+@media (max-width: 600px) {
+  .swap-row {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .swap-switch {
+    margin: 1rem 0;
+    justify-self: stretch;
+  }
+
+  .swap-cta {
+    margin-top: 1rem;
+  }
+}
+
 
 
 /*historial de transacciones*/
