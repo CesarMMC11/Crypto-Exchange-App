@@ -457,17 +457,92 @@ h2 {
 }
 /*diseño de los filtro de la tabla de binance*/
 
-.binance-table {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between;
+.binance-table-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.table-buttons button {
-  gap: 1rem;
+.binance-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c5364;
 }
+
+.binance-search {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.binance-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.binance-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #2c5364;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.binance-controls button:hover {
+  background-color: #203a43;
+}
+
+.binance-table-wrapper {
+  overflow-x: auto;
+}
+
+.binance-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.binance-table th,
+.binance-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.binance-table th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Responsive: móviles */
+@media (max-width: 600px) {
+  .binance-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .binance-search {
+    max-width: 100%;
+  }
+
+  .binance-table {
+    font-size: 0.85rem;
+    min-width: unset;
+  }
+
+  .binance-table-wrapper {
+    overflow-x: scroll;
+  }
+}
+
 
 /*Login y registro*/
 
